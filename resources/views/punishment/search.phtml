@@ -1,0 +1,74 @@
+<?php use Phalcon\Tag; ?>
+
+<?php echo $this->getContent(); ?>
+
+<table width="100%">
+    <tr>
+        <td align="left">
+            <?php echo $this->tag->linkTo(array("punishment/index", "প্রথম পাতা")); ?>
+        </td>
+        <td align="right">
+            <?php echo $this->tag->linkTo(array("punishment/new", "Create ")); ?>
+        </td>
+    <tr>
+</table>
+
+<table class="browse" align="center">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Prosecution</th>
+            <th>Criminal</th>
+            <th>Description</th>
+            <th>Is Of Realized</th>
+            <th>Jail</th>
+            <th>Law</th>
+            <th>Section</th>
+            <th>Fine Of In Of Word</th>
+            <th>Fine</th>
+            <th>Created Of By</th>
+            <th>Created Of Date</th>
+            <th>Update Of By</th>
+            <th>Update Of Date</th>
+            <th>Delete Of Status</th>
+         </tr>
+    </thead>
+    <tbody>
+    <?php foreach ($page->items as $punishment) { ?>
+        <tr>
+            <td><?php echo $punishment->id ?></td>
+            <td><?php echo $punishment->prosecution_id ?></td>
+            <td><?php echo $punishment->criminal_id ?></td>
+            <td><?php echo $punishment->description ?></td>
+            <td><?php echo $punishment->is_realized ?></td>
+            <td><?php echo $punishment->jail_id ?></td>
+            <td><?php echo $punishment->law_id ?></td>
+            <td><?php echo $punishment->section_id ?></td>
+            <td><?php echo $punishment->fine_in_word ?></td>
+            <td><?php echo $punishment->fine ?></td>
+            <td><?php echo $punishment->created_by ?></td>
+            <td><?php echo $punishment->created_date ?></td>
+            <td><?php echo $punishment->update_by ?></td>
+            <td><?php echo $punishment->update_date ?></td>
+            <td><?php echo $punishment->delete_status ?></td>
+            <td><?php echo $this->tag->linkTo(array("punishment/edit/" . $punishment->id, "Edit")); ?></td>
+            <td><?php echo $this->tag->linkTo(array("punishment/delete/" . $punishment->id, "Delete")); ?></td>
+        </tr>
+    <?php } ?>
+    </tbody>
+    <tbody>
+        <tr>
+            <td colspan="2" align="right">
+                <table align="center">
+                    <tr>
+                        <td><?php echo $this->tag->linkTo("punishment/search", "প্রথম") ?></td>
+                        <td><?php echo $this->tag->linkTo("punishment/search?page=" . $page->before, "আগে") ?></td>
+                        <td><?php echo $this->tag->linkTo("punishment/search?page=" . $page->next, "পরে") ?></td>
+                        <td><?php echo $this->tag->linkTo("punishment/search?page=" . $page->last, "শেষ") ?></td>
+                        <td><?php echo $page->current, "/", $page->total_pages ?></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    <tbody>
+</table>

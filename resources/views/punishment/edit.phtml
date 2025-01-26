@@ -1,0 +1,137 @@
+
+<?php echo $this->getContent(); ?>
+
+<?php echo $this->tag->form("punishment/save") ?>
+
+<table width="100%">
+    <tr>
+        <td align="left"><?php echo $this->tag->linkTo(array("punishment", "Back")) ?></td>
+        <td align="right"><?php echo $this->tag->submitButton("Save") ?></td>
+    <tr>
+</table>
+
+<div align="center">
+    <h1>Edit punishment</h1>
+</div>
+
+<table>
+    <tr>
+        <td align="right">
+            <label for="prosecution_id">Prosecution</label>
+        </td>
+        <td align="left">
+            <?php echo $this->tag->textField(array("prosecution_id", "type" => "number")) ?>
+        </td>
+    </tr>
+    <tr>
+        <td align="right">
+            <label for="criminal_id">Criminal</label>
+        </td>
+        <td align="left">
+            <?php echo $this->tag->textField(array("criminal_id", "type" => "number")) ?>
+        </td>
+    </tr>
+    <tr>
+        <td align="right">
+            <label for="description">Description</label>
+        </td>
+        <td align="left">
+            <?php echo $this->tag->textField(array("description", "type" => "number")) ?>
+        </td>
+    </tr>
+    <tr>
+        <td align="right">
+            <label for="is_realized">Is Of Realized</label>
+        </td>
+        <td align="left">
+            <?php echo $this->tag->textField(array("is_realized", "type" => "number")) ?>
+        </td>
+    </tr>
+    <tr>
+        <td align="right">
+            <label for="jail_id">Jail</label>
+        </td>
+        <td align="left">
+            <?php echo $this->tag->textField(array("jail_id", "type" => "number")) ?>
+        </td>
+    </tr>
+    <tr>
+        <td align="right">
+            <label for="law_id">Law</label>
+        </td>
+        <td align="left">
+            <?php echo $this->tag->textField(array("law_id", "type" => "number")) ?>
+        </td>
+    </tr>
+    <tr>
+        <td align="right">
+            <label for="section_id">Section</label>
+        </td>
+        <td align="left">
+            <?php echo $this->tag->textField(array("section_id", "type" => "number")) ?>
+        </td>
+    </tr>
+    <tr>
+        <td align="right">
+            <label for="fine_in_word">Fine Of In Of Word</label>
+        </td>
+        <td align="left">
+            <?php echo $this->tag->textField(array("fine_in_word", "size" => 30)) ?>
+        </td>
+    </tr>
+    <tr>
+        <td align="right">
+            <label for="fine">Fine</label>
+        </td>
+        <td align="left">
+            <?php echo $this->tag->textField(array("fine", "type" => "number")) ?>
+        </td>
+    </tr>
+    <tr>
+        <td align="right">
+            <label for="created_by">Created Of By</label>
+        </td>
+        <td align="left">
+            <?php echo $this->tag->textField(array("created_by", "size" => 30)) ?>
+        </td>
+    </tr>
+    <tr>
+        <td align="right">
+            <label for="created_date">Created Of Date</label>
+        </td>
+        <td align="left">
+            <?php echo $this->tag->textField(array("created_date", "type" => "number")) ?>
+        </td>
+    </tr>
+    <tr>
+        <td align="right">
+            <label for="update_by">Update Of By</label>
+        </td>
+        <td align="left">
+            <?php echo $this->tag->textField(array("update_by", "size" => 30)) ?>
+        </td>
+    </tr>
+    <tr>
+        <td align="right">
+            <label for="update_date">Update Of Date</label>
+        </td>
+        <td align="left">
+            <?php echo $this->tag->textField(array("update_date", "size" => 30)) ?>
+        </td>
+    </tr>
+    <tr>
+        <td align="right">
+            <label for="delete_status">Delete Of Status</label>
+        </td>
+        <td align="left">
+            <?php echo $this->tag->textField(array("delete_status", "type" => "number")) ?>
+        </td>
+    </tr>
+
+    <tr>
+        <td><?php echo $this->tag->hiddenField("id") ?></td>
+        <td><?php echo $this->tag->submitButton("Search") ?></td>
+    </tr>
+</table>
+
+</form>
